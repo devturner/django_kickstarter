@@ -27,4 +27,3 @@ def kickstarter_detail_view(request, pk=None):
     }
 
     return render(request, 'kickstarters/kickstarter_detail.html', context)
-
