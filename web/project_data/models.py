@@ -19,4 +19,7 @@ class Kickstarter(models.Model):
     usd_goal_real = models.FloatField()
 
     def __str__(self):
-        return '{}'.format(self.title)
+        return f'Campaign: {self.name} ({self.main_category})'
+
+    # def __repr__(self):
+    #     return f'< Book: {self.title} | Author: {self.author} | Year: {self.year} | ISBN: {self.isbn} | Date_Added: {self.date_added} | Last_Borrowed {self.last_borrowed} | ({self.status}) >'
