@@ -8,6 +8,8 @@ django = "*"
 "psycopg2-binary" = "*"
 libsass = "*"
 django-sass-processor = "*"
+redis = "*"
+django-redis = "*"
 
 [dev-packages]
 pandas = "*"
