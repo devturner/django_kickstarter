@@ -5,7 +5,7 @@
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Kickstarter Porjects</title>
+  <title>Kickstarter Projects</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
@@ -13,15 +13,15 @@
     <h1>Kickstarter Projects</h1>
     <nav>
       <ul>
-        <a href="{% url "campaign_list" %}">campaigns</a>
+        <li><a href="{% url "home" %}">Home</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    {% block content %}
-    <h3>No Content</h3>
-    {% endblock content %}
+    {% block content  %}
+    <h3> No Content</h3>
+    {% endblock  %}
   </main>
 
 </body>

@@ -1,8 +1,8 @@
 from django.urls import path
-from .views import campaign_detail_view, campaigns_list_view
+from .views import kickstarter_detail_view, kickstarter_list_view
 
 
 urlpatterns = [
-    path('', campaigns_list_view, name='campaign_list'),
-    path('<int:pk>', campaign_detail_view, name='campaign_detail'),
+    path('', kickstarter_list_view, name='home'),
+    path('<int:pk>', kickstarter_detail_view, name='kickstarter_details'),
 ]
