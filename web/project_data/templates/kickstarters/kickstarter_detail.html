@@ -1,0 +1,10 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+<h2>Welcome to the detail page</h2>
+<h3>{{ kickstarter.name }}</h3>
+<p>{{ kickstarter.category }}</p>
+<p>{{ kickstarter.goal }}</p>
+<p>{{ kickstarter.state }}</p>
+<p>{{ kickstarter.country }}</p>
+{% endblock content %}

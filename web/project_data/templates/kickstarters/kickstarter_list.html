@@ -1,0 +1,11 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+<h2>Welcome to the site! Check out these kickstarters!</h2>
+
+{% for kickstarter in kickstarters %}
+<a href="{% url "kickstarter_details" pk=kickstarter.id %}">
+  <h3>Name: {{ kickstarter.name }}, Category: {{ kickstarter.category }}</h3>
+</a>
+{% endfor %}
+{% endblock content %}

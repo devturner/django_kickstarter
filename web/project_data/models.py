@@ -19,4 +19,4 @@ class Kickstarter(models.Model):
     usd_goal_real = models.FloatField()
 
     def __str__(self):
-        return '{}'.format(self.title)
+        return '{}'.format(self.name)
