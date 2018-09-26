@@ -10,6 +10,9 @@ libsass = "*"
 django-sass-processor = "*"
 redis = "*"
 django-redis = "*"
+jupyter = "*"
+ipykernel = "*"
+pandas = "*"
 
 [dev-packages]
 pandas = "*"
