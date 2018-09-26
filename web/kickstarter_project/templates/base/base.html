@@ -1,4 +1,4 @@
-{% load static %}
+{% load sass_tags %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -7,6 +7,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Kickstarter Projects</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% comment %} <link type="text/css" rel="stylesheet" href="{% static "_reset.scss" %}"> {% endcomment %}
+  <link type="text/css" rel="stylesheet" href="{% sass_src "main.scss" %}">
 </head>
 <body>
   <header>
