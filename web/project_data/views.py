@@ -7,9 +7,10 @@ from .models import Kickstarter
 
 CACHE_TTL = getattr(settings, 'CACHE_TTL', DEFAULT_TIMEOUT)
 
+
 @cache_page(CACHE_TTL)
 def kickstarter_list_view(request):
-    kickstarters = get_list_or_404(Kickstarter)
+    kickstarters = get_list_or_404(Kickstarter.objects.order_by('-usd_pledged'))
     paginator = Paginator(kickstarters, 20)
     page = request.GET.get('page')
     kickstarters = paginator.get_page(page)

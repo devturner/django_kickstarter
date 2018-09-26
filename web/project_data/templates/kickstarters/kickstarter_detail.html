@@ -1,10 +1,15 @@
 {% extends 'base/base.html' %}
+{% load util %}
 
 {% block content %}
 <h2>Welcome to the detail page</h2>
-<h3>{{ kickstarter.name }}</h3>
-<p>{{ kickstarter.category }}</p>
-<p>{{ kickstarter.goal }}</p>
-<p>{{ kickstarter.state }}</p>
-<p>{{ kickstarter.country }}</p>
+<h3>Name: {{ kickstarter.name }}</h3>
+<p>Category: {{ kickstarter.main_category }}</p>
+<p>Sub-Category: {{ kickstarter.category }}</p>
+<p>Number of Backers: {{ kickstarter.backers }}</p>
+<p>Amount pledged per backer:  {{ kickstarter | pledged_per_backer }}</p>
+<p>Percent of goal met: {{ kickstarter | calculate_percentage }}</p>
+<p>Goal: {{ kickstarter.goal }}</p>
+<p>Outcome: {{ kickstarter.state | title }}</p>
+<p>Country: {{ kickstarter.country }}</p>
 {% endblock content %}
