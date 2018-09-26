@@ -134,7 +134,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # SASS Processor
 SASS_PROCESSOR_ROOT = STATIC_ROOT
-SASS_PROCESSOR_ENABLED = os.environ.get('DEBUG', False)
+SASS_PROCESSOR_ENABLED = os.environ.get('DEBUG', True)
 STATICFILES_FINDERS = [
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
@@ -154,7 +154,7 @@ CACHES = {
     }
 }
 
-CACHE_TTL = 60 * 5
+CACHE_TTL = 10
 
 LOGGING = {
     'version': 1,
