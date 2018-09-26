@@ -4,18 +4,18 @@
 
 <div class="pagination">
   <span class="step-links">
-    {% if kickstarters.has_previous %}
+    {% if curr_page != '1' %}
       <a href="?page=1">&laquo; first</a>
-      <a href="?page={{ kickstarters.previous_page_number }}">previous</a>
+      <a href="?page={{ prev_page }}">previous</a>
     {% endif %}
 
     <span class="current">
-      Page {{ kickstarters.number }} of {{ kickstarters.paginator.num_pages }}.
+      Page {{ curr_page }} of {{ num_pages }}.
     </span>
 
-    {% if kickstarters.has_next %}
-      <a href="?page={{ kickstarters.next_page_number }}">next</a>
-      <a href="?page={{ kickstarters.paginator.num_pages }}">last &raquo;</a>
+    {% if curr_page != num_pages %}
+      <a href="?page={{ next_page }}">next</a>
+      <a href="?page={{ num_pages }}">last &raquo;</a>
     {% endif %}
   </span>
 </div>
