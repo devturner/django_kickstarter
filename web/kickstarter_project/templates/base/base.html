@@ -8,15 +8,16 @@
   <title>Kickstarter Projects</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {% comment %} <link type="text/css" rel="stylesheet" href="{% static "_reset.scss" %}"> {% endcomment %}
+  <link rel="icon" href="{% sass_src "img/favicon.ico" %}">
   <link type="text/css" rel="stylesheet" href="{% sass_src "main.scss" %}">
 </head>
 <body>
   <header>
-    <h1>Kickstarter Projects</h1>
+    <h1 class="title">Kickstarter Projects</h1>
     <nav>
-      <ul>
-        <li><a href="{% url "home" %}">Home</a></li>
-      </ul>
+      <!-- <ul class="nav_list">
+        <li class="nav_item"><a href="{% url "home" %}">Home</a></li>
+      </ul> -->
     </nav>
   </header>
 

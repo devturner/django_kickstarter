@@ -10,7 +10,7 @@
     {% endif %}
 
     <span class="current">
-      Page {{ curr_page }} of {{ num_pages }}.
+      Page {{ curr_page }} of {{ num_pages }}
     </span>
 
     {% if curr_page != num_pages %}
@@ -21,13 +21,34 @@
 </div>
 
 
-  <h2>Welcome to the site! Check out these kickstarters!</h2>
-
+  <!-- <h2>Welcome to the site! Check out these kickstarters!</h2> -->
+  <ul class="kickstarter_list">
   {% for kickstarter in kickstarters %}
-    <a href="{% url "kickstarter_details" pk=kickstarter.id %}">
-      <h2>Name: {{ kickstarter.name }}</h2>
-      <h3>${{ kickstarter.usd_pledged }}</h3>
-      <p>pledged of ${{ kickstarter.usd_goal_real }}</p>
-    </a>
+    <li class="kickstarter_campaign">
+      <a href="{% url "kickstarter_details" pk=kickstarter.id %}">
+        <h2>{{ kickstarter.name }}</h2><br>
+        <h3>${{ kickstarter.usd_pledged }}</h3><br>
+        <p>pledged of ${{ kickstarter.usd_goal_real }}</p>
+      </a>
+    </li>
   {% endfor %}
+</ul>
+
+<div class="pagination">
+  <span class="step-links">
+    {% if curr_page != '1' %}
+      <a href="?page=1">&laquo; first</a>
+      <a href="?page={{ prev_page }}">previous</a>
+    {% endif %}
+
+    <span class="current">
+      Page {{ curr_page }} of {{ num_pages }}
+    </span>
+
+    {% if curr_page != num_pages %}
+      <a href="?page={{ next_page }}">next</a>
+      <a href="?page={{ num_pages }}">last &raquo;</a>
+    {% endif %}
+  </span>
+</div>
 {% endblock content %}
