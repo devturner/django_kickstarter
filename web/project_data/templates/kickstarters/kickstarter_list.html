@@ -25,7 +25,9 @@
 
   {% for kickstarter in kickstarters %}
     <a href="{% url "kickstarter_details" pk=kickstarter.id %}">
-      <h3>Name: {{ kickstarter.name }}, Category: {{ kickstarter.category }}</h3>
+      <h2>Name: {{ kickstarter.name }}</h2>
+      <h3>${{ kickstarter.usd_pledged }}</h3>
+      <p>pledged of ${{ kickstarter.usd_goal_real }}</p>
     </a>
   {% endfor %}
 {% endblock content %}
