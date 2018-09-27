@@ -2,6 +2,8 @@ from django.db import models
 
 
 class Kickstarter(models.Model):
+    """SQLAlchemy model for the Psql database
+    """
     campaign_id = models.IntegerField()
     name = models.CharField(max_length=1024)
     category = models.CharField(max_length=1024)

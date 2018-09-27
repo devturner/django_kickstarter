@@ -10,6 +10,8 @@ CACHE_TTL = getattr(settings, 'CACHE_TTL', DEFAULT_TIMEOUT)
 
 @cache_page(CACHE_TTL)
 def kickstarter_list_view(request):
+    """List view for kickstarters that implements custom pagination for efficiency.
+    """
     num_per_page = 20
 
     if request.GET.get('page'):
@@ -49,6 +51,8 @@ def kickstarter_list_view(request):
 
 
 def kickstarter_detail_view(request, pk=None):
+    """Kickstarter detail view
+    """
     kickstarter = get_object_or_404(Kickstarter, id=pk)
     context = {
         'kickstarter': kickstarter
