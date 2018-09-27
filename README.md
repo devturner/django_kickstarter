@@ -1,9 +1,9 @@
-# Stock Portfolio API
+# Kickstarter App
  **Authors**: Ben Hurst & Chris Turner
  **Version**: 1.0.0
 
  ## Overview
- Simple Kickstarter Display Using Django
+ Pretty much the defining app of our generation.
 
  ## Getting Started
 1. Clone or fork repo from github.
