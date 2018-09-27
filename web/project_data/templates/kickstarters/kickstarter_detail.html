@@ -2,14 +2,44 @@
 {% load util %}
 
 {% block content %}
-<h2>Welcome to the detail page</h2>
-<h3>Name: {{ kickstarter.name }}</h3>
-<p>Category: {{ kickstarter.main_category }}</p>
-<p>Sub-Category: {{ kickstarter.category }}</p>
-<p>Number of Backers: {{ kickstarter.backers }}</p>
-<p>Amount pledged per backer:  {{ kickstarter | pledged_per_backer }}</p>
-<p>Percent of goal met: {{ kickstarter | calculate_percentage }}</p>
-<p>Goal: {{ kickstarter.goal }}</p>
-<p>Outcome: {{ kickstarter.state | title }}</p>
-<p>Country: {{ kickstarter.country }}</p>
+
+  <h2 class="detail_title">{{ kickstarter.name }}</h2>
+
+  <table>
+      <tr>
+        <th>Category:</th>
+        <td>{{ kickstarter.main_category }}</td>
+      </tr>
+      <tr>
+      </tr>
+      <tr>
+        <th>Sub-Category:</th>
+        <td>{{ kickstarter.category }}</td>
+      </tr>
+      <tr>
+        <th>Number of Backers:</th>
+        <td>{{ kickstarter.backers }}</td>
+      </tr>
+      <tr>
+        <th>Amount pledged per backer:</th>
+        <td>{{ kickstarter | pledged_per_backer }}</td>
+      </tr>
+      <tr>
+        <th>Percent of goal met:</th>
+        <td>{{ kickstarter | calculate_percentage }}</td>
+      </tr>
+      <tr>
+        <th>Goal:</th>
+        <td>{{ kickstarter.goal }}</td>
+      </tr>
+      <tr>
+        <th>Outcome:</th>
+        <td>{{ kickstarter.state | title }}</td>
+      </tr>
+      <tr>
+        <th>Country:</th>
+        <td>{{ kickstarter.country }}</td>
+      </tr>
+    </table>
+
 {% endblock content %}

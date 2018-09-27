@@ -154,7 +154,7 @@ CACHES = {
     }
 }
 
-CACHE_TTL = 10
+CACHE_TTL = 60 * 5
 
 LOGGING = {
     'version': 1,

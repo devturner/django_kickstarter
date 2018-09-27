@@ -108,4 +108,31 @@ nav {
 .hide {
   display: none; }
 
+table {
+  background-color: antiquewhite;
+  margin: 0 auto;
+  margin-top: 30px;
+  width: 500px; }
+
+tr {
+  width: 100%; }
+
+td, th {
+  background-color: antiquewhite;
+  border: black 1px solid;
+  text-align: left;
+  padding: 8px;
+  width: 50%;
+  display: inline-block;
+  float: left; }
+
+th {
+  font-weight: 700; }
+
+.detail_title {
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 30px; }
+
 /*# sourceMappingURL=main.css.map */
